@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+    background-color: #020659;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #ffffff;
+}
+
+nav{
+    background: #020873;
+}
+h1{
+    margin: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-bottom: 0;
+    line-height: 32px;
+    text-align: center;
+    font-size: 28px;
+}
+h1 small{
+    font-size: 18px;
+}
+#avatar{
+    display: none;
+}
+
+.button{
+    display: inline-block;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 8px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.button:hover{
+    background-color: #020659;
+}
+.button:active{
+    background-color: #855678;
+}
+.scrolling-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+}
+
+#intro{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background: linear-gradient(to right, #2104D9, #000000);
+}
+#intro h2{
+    margin: 0;
+}
+#intro p{
+    margin-bottom: 0;
+}
+
+#trending{
+    background-color: #ffffff;
+    color: #590242;
+}
+#trending h2{
+    margin: 0;
+    padding-top: 32px;
+    padding-bottom: 8px;
+    padding-left: 40px;
+}
+#trending h3{
+    margin: 0;
+}
+#trending .card{
+    width: 311px;
+    height: 311px;
+    position: relative;
+    margin: 10px;
+}
+#trending .card-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #ffffff99;
+    z-index: 1;
+}
+#trending .artist::before{
+    content: 'Artist';
+    font-style: italic;
+    padding-right: 10px;
+}
+#trending audio{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#trending audio::-webkit-media-controls-mute-button {
+    background-color: #ffffffff;
+    border-radius: 50%;
+}
+#trending audio::-webkit-media-controls-play-button {
+    background-color: #ffffffff;
+    border-radius: 50%;
+}
+#trending audio::-webkit-media-controls-enclosure {
+    background-color: #ffffff77;
+}
+#trending-aloma{
+    background-image: url("./resources/images/aloma-cover.png");
+}
+#trending-my-road{
+    background-image: url("./resources/images/my-road-cover.png");
+}
+#trending-papaya{
+    background-image: url("./resources/images/papaya-cover.png");
+}
+#trending-smoothies{
+    background-image: url("./resources/images/smoothies-cover.png");
+}
+#trending-successful-performance{
+    background-image: url("./resources/images/successful-performance-cover.png");
+}
+
+#playlists, #curated{
+    background-color: #ffffff;
+    color: #590242;
+}
+#playlists h2, #curated h2{
+    margin: 0;
+    padding-top: 32px;
+    padding-bottom: 8px;
+    padding-left: 40px;
+}
+#playlists h3, #curated h3{
+    margin: 0;
+    margin-bottom: 10px;
+}
+#playlists .scrolling-container{
+    background-color: #2699fb;
+}
+#curated .scrolling-container{
+    background-color: #020873;
+}
+#playlists .card, #curated .card{
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.8em;
+}
+#playlists .card{
+    background-color: #0d8dfb;
+}
+#curated .card{
+    background-color: #020659;
+}
+#playlists .card-info, #curated .card-info{
+    padding: 10px;
+    z-index: 1;
+}
+
+footer{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    color: #590242;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+/* Removes gray line between sections */
+#playlists, #curated, footer{
+    margin-top: -1px;
+}
+
+
+#trending ::-webkit-scrollbar {
+    background-image: linear-gradient(to bottom, #c28ab2 0%, #c2b2bd 50%, #c28ab2 100%);
+}
+#trending ::-webkit-scrollbar-thumb {
+    background-color: #590242;
+    border-radius: 8px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background-color: #773465;
+}
+#trending ::-webkit-scrollbar-thumb:active {
+    background-color: #aa5592;
+}
+
+#curated ::-webkit-scrollbar {
+    background-color: #3b41ae;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    box-shadow: inset 0 0 10px #000000;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background-color: #020659;
+    border-radius: 8px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background-color: #020873;
+}
+#playlists ::-webkit-scrollbar-thumb:active, #curated ::-webkit-scrollbar-thumb:active {
+    background-color: #030a8c;
+}
+
+nav {
+    margin-bottom: -16px;
+}
+nav ul {
+    overflow: hidden;
+    max-height: 0;
+    padding-left: 0;
+    list-style: none;
+    transition: max-height .2s ease-out;
+}
+nav li a {
+    display:block;
+    padding:20px 20px;
+    text-decoration:none;
+    color:white;
+}
+nav li:hover {
+    background-image: linear-gradient(to right, #ffffff00 0%, #ffffff33 3%, #ffffff00 100%);
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: absolute;
+    top: 3px;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+    padding-bottom: 20px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+/* Desktop styling */
+@media screen and (min-width:834px) {
+    label, label span, input {
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        margin: 0;
+    }
+    nav a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+    h1, #avatar{
+        flex: 0;
+    }
+    h1{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        line-height: 56px;
+    }
+    nav ul{
+        display: flex;
+        flex: 1;
+        list-style: none;
+        text-align: center;
+        padding-left: 0;
+        max-height: initial;
+    }
+    nav li{
+        flex: 1;
+    }
+    nav li:hover{
+        background-image: linear-gradient(to right, #ffffff00 0%, #ffffff33 50%, #ffffff00 100%);
+    }
+    nav li a{
+        padding: 0;
+    }
+    #avatar{
+        display: block;
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
+    .button-row{
+        text-align: right;
+    }
+    #playlist-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #playlist-group .scrolling-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        max-height: 500px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    #playlist-group .card{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        height: auto;
+        padding: 8px;
+    }
+}
